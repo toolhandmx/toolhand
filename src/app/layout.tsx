@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "ToolHand - Tecnología y creatividad al servicio de tu día a día",
+    default: "ToolHand: Tecnología y creatividad al servicio de tu día a día",
     template: "%s - ToolHand",
   },
   description:
