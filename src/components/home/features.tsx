@@ -67,12 +67,12 @@ export default function Component() {
   return (
     <section
       id="nosotros"
-      className="flex flex-col items-center justify-center gap-12 p-12"
+      className="flex flex-col items-center justify-center gap-4 p-4 sm:gap-12 sm:p-12"
     >
-      <h1 className="text-2xl font-bold text-center">
+      <h1 className="text-2xl font-bold text-center p-6 sm:p-0">
         Nuestras características:
       </h1>
-      <div className="flex flex-wrap h-full gap-12">
+      <div className="flex flex-wrap h-full gap-4 sm:gap-12">
         {features.map((feature, index) => (
           <Card
             key={index}

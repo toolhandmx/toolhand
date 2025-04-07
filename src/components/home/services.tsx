@@ -49,7 +49,7 @@ export default function Component() {
         },
       ],
       footer: (
-        <span>
+        <span className="mt-2">
           ¿Problemas con tu celular?{" "}
           <b>
             ¡
@@ -94,7 +94,7 @@ export default function Component() {
         },
       ],
       footer: (
-        <span>
+        <span className="mt-2">
           ¿Listo para dar el salto al mundo digital?{" "}
           <b>
             ¡
@@ -139,7 +139,7 @@ export default function Component() {
         },
       ],
       footer: (
-        <span>
+        <span className="mt-2">
           ¿Quieres optimizar la administración de tu negocio?{" "}
           <b>
             ¡
@@ -159,12 +159,14 @@ export default function Component() {
   return (
     <section
       id="servicios"
-      className="flex flex-col items-center gap-12 p-12 pt-0"
+      className="flex flex-col items-center gap-4 p-4 sm:gap-12 sm:p-12 pt-0"
     >
-      <h1 className="text-2xl font-bold text-center">Nuestros servicios:</h1>
-      <div className="flex flex-col gap-12">
+      <h1 className="text-2xl font-bold text-center p-6 sm:p-0">
+        Nuestros servicios:
+      </h1>
+      <div className="flex flex-col gap-4 sm:gap-12">
         {services.map((service, index) => (
-          <Card key={index} className="p-0 overflow-hidden">
+          <Card key={index} className="grow-1 p-0 overflow-hidden">
             <CardContent
               className={`flex flex-col justify-between md:flex-row text-balance p-0 ${
                 index % 2 !== 0 ? "md:flex-row-reverse" : ""

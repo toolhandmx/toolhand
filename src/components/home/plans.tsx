@@ -78,12 +78,14 @@ export default function Component() {
   ];
   return (
     <section id="planes" className="flex flex-col">
-      <h1 className="text-2xl font-bold text-center">Nuestros planes:</h1>
-      <div className="flex flex-wrap p-12 gap-12">
+      <h1 className="text-2xl font-bold text-center p-6 sm:p-0">
+        Nuestros planes:
+      </h1>
+      <div className="flex flex-wrap p-4 gap-4 sm:p-12 sm:gap-12">
         {plans.map((plan, index) => (
           <Card
             key={index}
-            className="w-[18rem] shrink-0 grow-1 flex flex-col p-0 gap-0 overflow-hidden"
+            className="w-min shrink-0 grow-1 flex flex-col p-0 gap-0 overflow-hidden"
           >
             <CardHeader className="relative flex flex-col items-center justify-center p-12 overflow-hidden">
               <Image

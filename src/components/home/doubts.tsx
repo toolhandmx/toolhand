@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Component() {
   return (
-    <section className="flex flex-col items-center justify-center p-12 pt-0">
+    <section className="flex flex-col items-center justify-center p-12 sm:pt-0">
       <h1 className="text-3xl font-bold text-center">
         ¿Tienes dudas o necesitas más información?
       </h1>
