@@ -23,9 +23,32 @@ export const metadata: Metadata = {
     template: "%s - ToolHand",
   },
   description:
-    "Especialistas en soluciones integrales para la reparación de celulares y creación de páginas web.",
+    "Especialistas en soluciones integrales para la reparación de celulares, creación de páginas web e implementación de puntos de venta.",
   icons: {
     icon: "/favicon.svg",
+  },
+  openGraph: {
+    type: "website",
+    title: "ToolHand: Tecnología y creatividad al servicio de tu día a día",
+    description:
+      "Especialistas en soluciones integrales para la reparación de celulares, creación de páginas web e implementación de puntos de venta.",
+    url: "https://toolhand.vercel.app",
+    locale: "es_MX",
+    images: [
+      {
+        url: "https://toolhand.vercel.app/preview.png",
+        width: 800,
+        height: 600,
+        alt: "ToolHand's Website Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ToolHand: Tecnología y creatividad al servicio de tu día a día",
+    description:
+      "Especialistas en soluciones integrales para la reparación de celulares, creación de páginas web e implementación de puntos de venta.",
+    images: ["https://toolhand.vercel.app/preview.png"],
   },
 };
 
