@@ -2,6 +2,8 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+/* cspell:disable-next-line */
+import "remixicon/fonts/remixicon.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
 

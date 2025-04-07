@@ -1,17 +1,9 @@
-import {
-  SparklesIcon,
-  CpuIcon,
-  HandshakeIcon,
-  HeadsetIcon,
-  AwardIcon,
-} from "lucide-react";
-
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 export default function Component() {
   const features = [
     {
-      icon: <SparklesIcon className="size-10 text-primary" />,
+      icon: <i className="ri-sparkling-fill text-5xl text-primary" />,
       title: "Calidad Excepcional",
       description: (
         <p>
@@ -23,7 +15,7 @@ export default function Component() {
       ),
     },
     {
-      icon: <CpuIcon className="size-10 text-primary" />,
+      icon: <i className="ri-cpu-line text-5xl text-primary" />,
       title: "Tecnología de Vanguardia",
       description: (
         <p>
@@ -36,7 +28,7 @@ export default function Component() {
       ),
     },
     {
-      icon: <HandshakeIcon className="size-10 text-primary" />,
+      icon: <i className="ri-shake-hands-fill text-5xl text-primary" />,
       title: "Experiencia y Profesionalismo",
       description: (
         <p>
@@ -48,7 +40,7 @@ export default function Component() {
       ),
     },
     {
-      icon: <HeadsetIcon className="size-10 text-primary" />,
+      icon: <i className="ri-customer-service-fill text-5xl text-primary" />,
       title: "Atención Personalizada y Compromiso",
       description: (
         <p>
@@ -59,7 +51,7 @@ export default function Component() {
       ),
     },
     {
-      icon: <AwardIcon className="size-10 text-primary" />,
+      icon: <i className="ri-award-fill text-5xl text-primary" />,
       title: "Garantía y Confianza",
       description: (
         <p>

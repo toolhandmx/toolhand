@@ -10,12 +10,17 @@ import {
   ScanEyeIcon,
   RadioTowerIcon,
   ShoppingCartIcon,
+  MonitorSmartphoneIcon,
+  PackageSearchIcon,
+  CreditCardIcon,
+  LineChartIcon,
 } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
 
 import smartphoneRepair from "./assets/smartphone-repair.webp";
 import webDevelopment from "./assets/web-development.webp";
+import pointOfSale from "./assets/point-of-sale.webp";
 
 export default function Component() {
   const services = [
@@ -101,6 +106,51 @@ export default function Component() {
               Contáctenos ahora
             </Link>{" "}
             y reciba una asesoría gratuita hoy mismo!
+          </b>
+        </span>
+      ),
+    },
+    {
+      image: pointOfSale,
+      title: "Implementación de puntos de venta",
+      subtitle: "Gestiona tu negocio de forma eficiente",
+      description:
+        "Te ayudamos a modernizar tu negocio con sistemas de punto de venta intuitivos y personalizados. Te ofrecemos todo lo necesario para que tengas el control total de tus ventas, inventario y clientes.",
+      features: [
+        {
+          icon: <MonitorSmartphoneIcon className="text-primary shrink-0" />,
+          text: "Sistemas adaptables a cualquier tipo de negocio",
+        },
+        {
+          icon: <PackageSearchIcon className="text-primary shrink-0" />,
+          text: "Control de inventario en tiempo real",
+        },
+        {
+          icon: <CreditCardIcon className="text-primary shrink-0" />,
+          text: "Integración con métodos de pago modernos",
+        },
+        {
+          icon: <LineChartIcon className="text-primary shrink-0" />,
+          text: "Reportes y estadísticas de ventas automáticas",
+        },
+        {
+          icon: <HeadsetIcon className="text-primary shrink-0" />,
+          text: "Capacitación y soporte técnico incluidos",
+        },
+      ],
+      footer: (
+        <span>
+          ¿Quieres optimizar la administración de tu negocio?{" "}
+          <b>
+            ¡
+            <Link
+              href="https://wa.me/+525586029325"
+              target="_blank"
+              className="text-primary"
+            >
+              Contáctenos ahora
+            </Link>{" "}
+            y comienza a vender de forma inteligente!
           </b>
         </span>
       ),

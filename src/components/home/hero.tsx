@@ -14,12 +14,13 @@ export default function Component() {
         alt="ToolHand's Hero Image"
         className="w-full h-full object-cover opacity-50 absolute inset-0"
       />
-      <h1 className="font-bold text-white text-3xl md:text-6xl md:max-w-[66dvw] text-balance text-center text-shadow-lg z-10">
+      <h1 className="font-bold text-white text-3xl md:text-6xl md:max-w-[66dvw] text-balance text-center text-shadow-lg z-10 leading-18">
         Tecnología y creatividad al servicio de tu día a día
       </h1>
       <p className="font-semibold opacity-75 text-white text-xl md:text-2xl md:max-w-[66dvw] text-balance text-center text-shadow-lg z-10 mt-4">
-        Nos especializamos en soluciones integrales para la reparación de
-        celulares y creación de páginas web.
+        Nos especializamos en brindar soluciones informáticas integrales,
+        abarcando la reparación de celulares, el desarrollo de páginas web y
+        software para puntos de venta.
       </p>
       <Link
         className="text-white text-xl z-10 mt-8 bg-primary p-4 rounded-2xl hover:font-bold transition-all"

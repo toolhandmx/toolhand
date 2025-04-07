@@ -32,9 +32,9 @@ export default function Component() {
       id: "standard",
       title: "Standard",
       image: gradient2,
-      price: 1699,
+      price: 1849,
       features: [
-        "Todos los beneficios anteriores",
+        "Todo lo que incluye Basic",
         "Página web de 6 secciones",
         "6 modificaciones por mes",
         "Menú de productos",
@@ -48,9 +48,9 @@ export default function Component() {
       id: "premium",
       title: "Premium",
       image: gradient3,
-      price: 2199,
+      price: 2499,
       features: [
-        "Todos los beneficios anteriores",
+        "Todo lo que incluye Standard",
         "Página web de 8 secciones",
         "8 modificaciones por mes",
         "Tienda en línea sencilla",
@@ -64,9 +64,9 @@ export default function Component() {
       id: "ultimate",
       title: "Ultimate",
       image: gradient4,
-      price: 3599,
+      price: 3999,
       features: [
-        "Todos los beneficios anteriores",
+        "Todo lo que incluye Premium",
         "Página web de 12 secciones",
         "12 modificaciones por mes",
         "Tienda en línea completa",
@@ -91,11 +91,11 @@ export default function Component() {
                 alt={plan.title}
                 className="object-cover absolute"
               />
-              <h2 className="text-3xl font-bold z-10 text-black">
+              <h2 className="text-4xl font-bold z-10 text-black">
                 {plan.title}
               </h2>
             </CardHeader>
-            <CardContent className="p-6">
+            <CardContent className="flex flex-col items-center p-6">
               <div className="flex justify-center items-baseline">
                 <span className="text-4xl font-bold">
                   ${plan.price.toLocaleString()}
