@@ -1,15 +1,81 @@
-import Image from "next/image";
+"use client";
 
+import Link from "next/link";
+import Image from "next/image";
 import { CheckIcon } from "lucide-react";
+
+import { useState } from "react";
 
 import gradient1 from "./assets/gradient-1.webp";
 import gradient2 from "./assets/gradient-2.webp";
 import gradient3 from "./assets/gradient-3.webp";
 import gradient4 from "./assets/gradient-4.webp";
 
-import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import { useMediaQuery } from "@/hooks/use-media-query";
+
+import { cn } from "@/lib/utils";
+
+import { Button, buttonVariants } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerDescription,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Component() {
+  const [open, setOpen] = useState(false);
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+  if (isDesktop) {
+    return (
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogTrigger asChild>
+          <Button variant="outline">Ver planes</Button>
+        </DialogTrigger>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle>Nuestros planes</DialogTitle>
+            <DialogDescription>
+              Selecciona un plan para ver sus detalles:
+            </DialogDescription>
+          </DialogHeader>
+          <Plans />
+        </DialogContent>
+      </Dialog>
+    );
+  }
+  return (
+    <Drawer open={open} onOpenChange={setOpen}>
+      <DrawerTrigger asChild>
+        <Button variant="outline">Ver planes</Button>
+      </DrawerTrigger>
+      <DrawerContent>
+        <DrawerHeader className="text-center">
+          <DrawerTitle className="text-2xl">Nuestros planes</DrawerTitle>
+          <DrawerDescription>
+            Selecciona un plan para ver sus detalles:
+          </DrawerDescription>
+        </DrawerHeader>
+        <div className="p-4">
+          <Plans />
+        </div>
+      </DrawerContent>
+    </Drawer>
+  );
+}
+
+function Plans() {
   const plans = [
     {
       id: "basic",
@@ -77,47 +143,43 @@ export default function Component() {
     },
   ];
   return (
-    <section id="planes" className="flex flex-col">
-      <h1 className="text-2xl font-bold text-center p-6 sm:p-0">
-        Nuestros planes:
-      </h1>
-      <div className="flex flex-wrap p-4 gap-4 sm:p-12 sm:gap-12">
-        {plans.map((plan, index) => (
-          <Card
-            key={index}
-            className="w-min shrink-0 grow-1 flex flex-col p-0 gap-0 overflow-hidden"
+    <Tabs defaultValue="standard">
+      <TabsList className="grid w-full grid-cols-4">
+        <TabsTrigger value="basic">Basic</TabsTrigger>
+        <TabsTrigger value="standard">Standard</TabsTrigger>
+        <TabsTrigger value="premium">Premium</TabsTrigger>
+        <TabsTrigger value="ultimate">Ultimate</TabsTrigger>
+      </TabsList>
+      {plans.map((plan, index) => (
+        <TabsContent key={index} value={plan.id} className="flex flex-col">
+          <header className="mt-2 relative flex flex-col items-center justify-center p-6 rounded-xl overflow-hidden">
+            <Image
+              src={plan.image}
+              alt={plan.title}
+              className="object-cover absolute"
+            />
+            <h2 className="text-4xl font-bold z-10 text-black">{plan.title}</h2>
+          </header>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4">
+            {plan.features.map((feature, index) => (
+              <li key={index} className="flex items-center gap-2">
+                <CheckIcon
+                  strokeWidth={4}
+                  className="text-emerald-500 shrink-0"
+                />
+                <span className="text-pretty">{feature}</span>
+              </li>
+            ))}
+          </ul>
+          <Link
+            href="https://wa.me/+525610348480"
+            target="_blank"
+            className={cn(buttonVariants(), "mt-4 w-full")}
           >
-            <CardHeader className="relative flex flex-col items-center justify-center p-12 overflow-hidden">
-              <Image
-                src={plan.image}
-                alt={plan.title}
-                className="object-cover absolute"
-              />
-              <h2 className="text-4xl font-bold z-10 text-black">
-                {plan.title}
-              </h2>
-            </CardHeader>
-            <CardContent className="flex flex-col items-center p-6">
-              <div className="flex justify-center items-baseline">
-                <span className="text-4xl font-bold">
-                  ${plan.price.toLocaleString()}
-                </span>
-                <span className="italic text-muted-foreground font-semibold">
-                  /mes
-                </span>
-              </div>
-              <ul className="flex flex-col gap-2 mt-4">
-                {plan.features.map((feature, index) => (
-                  <li key={index} className="flex items-center gap-2">
-                    <CheckIcon strokeWidth={4} className="text-emerald-500" />
-                    <span className="text-pretty">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    </section>
+            Me interesa
+          </Link>
+        </TabsContent>
+      ))}
+    </Tabs>
   );
 }

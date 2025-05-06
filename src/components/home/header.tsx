@@ -34,11 +34,7 @@ export default function Component() {
       title: "Servicios",
     },
     {
-      href: "#planes",
-      title: "Planes",
-    },
-    {
-      href: "https://wa.me/+525586029325",
+      href: "https://wa.me/+525610348480",
       title: "Contacto",
       external: true,
     },

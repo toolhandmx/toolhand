@@ -24,7 +24,7 @@ export default function Component() {
       </p>
       <Link
         className="text-white text-xl z-10 mt-8 bg-primary p-4 rounded-2xl hover:font-bold transition-all"
-        href="https://wa.me/+525586029325"
+        href="https://wa.me/+525610348480"
         target="_blank"
       >
         Contactar ahora

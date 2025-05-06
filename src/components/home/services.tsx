@@ -22,6 +22,8 @@ import smartphoneRepair from "./assets/smartphone-repair.webp";
 import webDevelopment from "./assets/web-development.webp";
 import pointOfSale from "./assets/point-of-sale.webp";
 
+import Plans from "@/components/home/plans";
+
 export default function Component() {
   const services = [
     {
@@ -54,7 +56,7 @@ export default function Component() {
           <b>
             ¡
             <Link
-              href="https://wa.me/+525586029325"
+              href="https://wa.me/+525610348480"
               target="_blank"
               className="text-primary"
             >
@@ -94,20 +96,23 @@ export default function Component() {
         },
       ],
       footer: (
-        <span className="mt-2">
-          ¿Listo para dar el salto al mundo digital?{" "}
-          <b>
-            ¡
-            <Link
-              href="https://wa.me/+525586029325"
-              target="_blank"
-              className="text-primary"
-            >
-              Contáctenos ahora
-            </Link>{" "}
-            y reciba una asesoría gratuita hoy mismo!
-          </b>
-        </span>
+        <>
+          <span className="mt-2">
+            ¿Listo para dar el salto al mundo digital?{" "}
+            <b>
+              ¡
+              <Link
+                href="https://wa.me/+525610348480"
+                target="_blank"
+                className="text-primary"
+              >
+                Contáctenos ahora
+              </Link>{" "}
+              y reciba una asesoría gratuita hoy mismo!
+            </b>
+          </span>
+          <Plans />
+        </>
       ),
     },
     {
@@ -144,7 +149,7 @@ export default function Component() {
           <b>
             ¡
             <Link
-              href="https://wa.me/+525586029325"
+              href="https://wa.me/+525610348480"
               target="_blank"
               className="text-primary"
             >
@@ -159,7 +164,7 @@ export default function Component() {
   return (
     <section
       id="servicios"
-      className="flex flex-col items-center gap-4 p-4 sm:gap-12 sm:p-12 pt-0"
+      className="flex flex-col items-center gap-4 p-4 sm:gap-12 sm:p-12 pt-0 sm:pt-0"
     >
       <h1 className="text-2xl font-bold text-center p-6 sm:p-0">
         Nuestros servicios:
