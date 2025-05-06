@@ -41,7 +41,9 @@ export default function Component() {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <Button variant="outline">Ver planes</Button>
+          <Button variant="outline" className="mt-auto">
+            Ver planes
+          </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
@@ -58,7 +60,9 @@ export default function Component() {
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
-        <Button variant="outline">Ver planes</Button>
+        <Button variant="outline" className="mt-auto">
+          Ver planes
+        </Button>
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader className="text-center">
@@ -151,12 +155,17 @@ function Plans() {
         <TabsTrigger value="ultimate">Ultimate</TabsTrigger>
       </TabsList>
       {plans.map((plan, index) => (
-        <TabsContent key={index} value={plan.id} className="flex flex-col">
+        <TabsContent
+          key={index}
+          value={plan.id}
+          className="flex flex-col min-h-104"
+        >
           <header className="mt-2 relative flex flex-col items-center justify-center p-6 rounded-xl overflow-hidden">
             <Image
               src={plan.image}
               alt={plan.title}
               className="object-cover absolute"
+              priority
             />
             <h2 className="text-4xl font-bold z-10 text-black">{plan.title}</h2>
           </header>
@@ -174,7 +183,7 @@ function Plans() {
           <Link
             href="https://wa.me/+525610348480"
             target="_blank"
-            className={cn(buttonVariants(), "mt-4 w-full")}
+            className={cn(buttonVariants(), "mt-4 w-full mt-auto")}
           >
             Me interesa
           </Link>

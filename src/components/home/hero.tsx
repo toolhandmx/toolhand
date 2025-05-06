@@ -13,6 +13,7 @@ export default function Component() {
         src={hero}
         alt="ToolHand's Hero Image"
         className="w-full h-full object-cover opacity-50 absolute inset-0"
+        priority
       />
       <h1 className="font-bold text-white text-3xl md:text-6xl md:max-w-[66dvw] text-balance text-center text-shadow-md text-shadow-black z-10 md:leading-18">
         Tecnología y creatividad al servicio de tu día a día
